@@ -1,14 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
-<?php
+    <?php
 
-  $password = $_GET['password'];
+      $password = $_GET['password'];
 
-  if(strpos($password, 'Boolean') !== false || strpos($password, 'boolean') !== false ){
-    echo '<div style="color:green; font-weight:bold;">ACCESSO CONSENTITO</div>';
-  }else{
-    echo '<div style="color:red;">ACCESSO NEGATO</div>';
-  }
+      
+      if($password == 'Boolean'){
+      ?>
+      <div style="color:green; font-weight:bold;">ACCESSO CONSENTITO</div>
+      <?php
+      }else{
+        ?>
+       <div style="color:red;">ACCESSO NEGATO</div>
+       <?php   } ?>
 
 
+      // come best practice non conviene scrivere html dentro i tag echo
 
- ?>
+
+  </body>
+</html>
